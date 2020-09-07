@@ -3,7 +3,7 @@
         "packages/*"
     ],
     "hoist": true,
-    "version": "5.2.4-ssr.1",
+    "version": "5.2.4-ssr.2",
     "command": {
         "publish": {
             "allowBranch": "master"

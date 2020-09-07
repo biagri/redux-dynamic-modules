@@ -1,6 +1,6 @@
 {
     "name": "@biagri/redux-dynamic-modules-saga",
-    "version": "5.2.4-ssr.1",
+    "version": "5.2.4-ssr.2",
     "description": "Saga Extension for redux-dynamic-modules",
     "repository": {
         "type": "github",
