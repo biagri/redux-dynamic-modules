@@ -1,15 +1,23 @@
-import { ISagaRegistration, ISagaWithArguments } from "./Contracts";
+import {
+    ISagaManager,
+    ISagaRegistration,
+    ISagaWithArguments,
+} from "./Contracts";
 import { SagaMiddleware, Task } from "redux-saga";
 import { sagaEquals } from "./SagaComparer";
-import { IItemManager, getMap } from "@biagri/redux-dynamic-modules-core";
+import { getMap } from "@biagri/redux-dynamic-modules-core";
+
+interface TaskV1 extends Omit<Task, "done"> {
+    toPromise: () => Promise<any>;
+}
 
 /**
  * Creates saga items which can be used to start and stop sagas dynamically
  */
 export function getSagaManager(
     sagaMiddleware: SagaMiddleware<any>
-): IItemManager<ISagaRegistration<any>> {
-    const tasks = getMap<ISagaRegistration<any>, Task>(sagaEquals);
+): ISagaManager {
+    const tasks = getMap<ISagaRegistration<any>, Task | TaskV1>(sagaEquals);
 
     return {
         getItems: (): ISagaRegistration<any>[] => [...tasks.keys],
@@ -37,6 +45,25 @@ export function getSagaManager(
         dispose: () => {
             // Cancel everything
             tasks.keys.forEach(k => tasks.get(k).cancel());
+        },
+
+        done: () => {
+            // Wait for everything to complete
+            // Don't use Promise.all as it rejects on the first rejection
+            // (this a reimplementation of Promise.allSettled)
+            return tasks.keys
+                .map(k => {
+                    const task = tasks.get(k);
+                    if ("done" in task) {
+                        return task.done;
+                    } else {
+                        return task.toPromise();
+                    }
+                })
+                .reduce(
+                    async (all, next) => all.then(() => next, () => next),
+                    Promise.resolve()
+                );
         },
     };
 }
