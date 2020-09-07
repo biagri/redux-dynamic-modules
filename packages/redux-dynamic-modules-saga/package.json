@@ -1,6 +1,6 @@
 {
     "name": "@biagri/redux-dynamic-modules-saga",
-    "version": "5.2.4-ssr.0",
+    "version": "5.2.4-ssr.1",
     "description": "Saga Extension for redux-dynamic-modules",
     "repository": {
         "type": "github",
@@ -28,7 +28,7 @@
     "author": "Navneet Gupta (Microsoft), Alex Bettadapur (Facebook)",
     "license": "MIT",
     "devDependencies": {
-        "@biagri/redux-dynamic-modules-core": "^5.2.4-ssr.0",
+        "@biagri/redux-dynamic-modules-core": "^5.2.4-ssr.1",
         "@types/jest": "^23.3.1",
         "@types/redux": "3.6.0",
         "@types/redux-saga": "0.10.5",

@@ -1,6 +1,6 @@
 {
     "name": "@biagri/redux-dynamic-modules",
-    "version": "5.2.4-ssr.0",
+    "version": "5.2.4-ssr.1",
     "description": "Modularize the redux app by dynamically loading reducers, state and sagas",
     "repository": {
         "type": "github",
@@ -51,8 +51,8 @@
         "redux": ">= 3.0.0"
     },
     "dependencies": {
-        "@biagri/redux-dynamic-modules-core": "^5.2.4-ssr.0",
-        "@biagri/redux-dynamic-modules-react": "^5.2.4-ssr.0"
+        "@biagri/redux-dynamic-modules-core": "^5.2.4-ssr.1",
+        "@biagri/redux-dynamic-modules-react": "^5.2.4-ssr.1"
     },
     "gitHead": "4442605f1803a496de144aca71e4744255339593"
 }

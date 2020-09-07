@@ -1,6 +1,6 @@
 {
     "name": "@biagri/redux-dynamic-modules-thunk",
-    "version": "5.2.4-ssr.0",
+    "version": "5.2.4-ssr.1",
     "description": "Thunk Extension for redux-dynamic-modules",
     "repository": {
         "type": "github",
@@ -26,7 +26,7 @@
     "author": "Navneet Gupta (Microsoft), Alex Bettadapur (Facebook)",
     "license": "MIT",
     "devDependencies": {
-        "@biagri/redux-dynamic-modules-core": "^5.2.4-ssr.0",
+        "@biagri/redux-dynamic-modules-core": "^5.2.4-ssr.1",
         "@types/jest": "^23.3.1",
         "@types/redux": "3.6.0",
         "jest": "^23.5.0",
