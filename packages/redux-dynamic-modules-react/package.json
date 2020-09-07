@@ -1,5 +1,5 @@
 {
-    "name": "redux-dynamic-modules-react",
+    "name": "@biagri/redux-dynamic-modules-react",
     "version": "5.2.3",
     "description": "Modularize the redux app by dynamically loading reducers, state and sagas",
     "repository": {
