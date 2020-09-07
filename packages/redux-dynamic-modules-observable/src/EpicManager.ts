@@ -1,4 +1,7 @@
-import { getObjectRefCounter, IItemManager } from "redux-dynamic-modules-core";
+import {
+    getObjectRefCounter,
+    IItemManager,
+} from "@biagri/redux-dynamic-modules-core";
 import { Epic, EpicMiddleware } from "redux-observable";
 import { Observable, Subject } from "rxjs";
 import { ignoreElements, switchMap } from "rxjs/operators";
@@ -54,7 +57,7 @@ export function getEpicManager(
                     runningEpics[epicKey] = replaceableWrapper;
                 }
                 /**
-                 * We follow practice on official document https://redux-dynamic-modules.js.org/#/reference/ModuleCounting
+                 * We follow practice on official document https://@biagri/redux-dynamic-modules.js.org/#/reference/ModuleCounting
                  * So we use RefCounter to determine when we should remove epic
                  */
                 epicRefCounter.add(epic);
@@ -120,7 +123,5 @@ function createReplaceableWrapper() {
  * This epic do nothing and we need it to be used for real epic replacement
  */
 function emptyEpic(action$) {
-    return action$.pipe(
-        ignoreElements()
-    );
+    return action$.pipe(ignoreElements());
 }

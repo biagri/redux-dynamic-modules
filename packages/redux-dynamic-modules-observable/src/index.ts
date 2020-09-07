@@ -1,9 +1,9 @@
 import { createEpicMiddleware } from "redux-observable";
-import { IExtension } from "redux-dynamic-modules-core";
+import { IExtension } from "@biagri/redux-dynamic-modules-core";
 import { getEpicManager } from "./EpicManager";
 import { IEpicModule } from "./Contracts";
 
-export * from './Contracts'
+export * from "./Contracts";
 
 export function getObservableExtension(): IExtension {
     const epicMiddleware = createEpicMiddleware();

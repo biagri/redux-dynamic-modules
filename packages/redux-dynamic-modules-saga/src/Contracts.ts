@@ -1,4 +1,4 @@
-import { IModule } from "redux-dynamic-modules-core";
+import { IModule } from "@biagri/redux-dynamic-modules-core";
 
 export interface ISagaWithArguments<T> {
     saga: (argument?: T) => Iterator<any>;

@@ -4,7 +4,7 @@ import {
     IItemManager,
     getRefCountedManager,
     IModuleManager,
-} from "redux-dynamic-modules-core";
+} from "@biagri/redux-dynamic-modules-core";
 import { ISagaRegistration, ISagaModule } from "./Contracts";
 import { getSagaManager } from "./SagaManager";
 import { sagaEquals } from "./SagaComparer";
@@ -20,7 +20,10 @@ export function getSagaExtension<C>(
     let sagaMonitor = undefined;
 
     //@ts-ignore
-    if (process.env.NODE_ENV === "development" && typeof window !== "undefined") {
+    if (
+        process.env.NODE_ENV === "development" &&
+        typeof window !== "undefined"
+    ) {
         sagaMonitor = window["__SAGA_MONITOR_EXTENSION__"] || undefined;
     }
 

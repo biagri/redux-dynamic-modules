@@ -13,12 +13,12 @@ module.exports = (env, argv) => {
         },
 
         output: {
-            library: "redux-dynamic-modules-observable",
+            library: "@biagri/redux-dynamic-modules-observable",
             libraryTarget: "umd",
             filename:
                 mode_env === "production"
-                    ? "redux-dynamic-modules-observable.min.js"
-                    : "redux-dynamic-modules-observable.js",
+                    ? "@biagri/redux-dynamic-modules-observable.min.js"
+                    : "@biagri/redux-dynamic-modules-observable.js",
             path: __dirname + "/dist/",
         },
 
@@ -27,7 +27,8 @@ module.exports = (env, argv) => {
             redux: "redux",
             "react-redux": "react-redux",
             "redux-observable": "redux-observable",
-            "redux-dynamic-modules-core": "redux-dynamic-modules-core",
+            "@biagri/redux-dynamic-modules-core":
+                "@biagri/redux-dynamic-modules-core",
             rxjs: "rxjs",
             "rxjs/operators": "rxjs/operators",
             "rxjs/observable": "rxjs/observable",

@@ -6,7 +6,7 @@ import {
     IDynamicallyAddedModule,
     IModuleStore,
     IModuleTuple,
-} from "redux-dynamic-modules-core";
+} from "@biagri/redux-dynamic-modules-core";
 
 export interface IDynamicModuleLoaderProps {
     /** Modules that need to be dynamically registerd */
@@ -164,7 +164,7 @@ class DynamicModuleLoaderImpl extends React.Component<
             this._addedModules.remove();
             this._addedModules = undefined;
         }
-    }
+    };
 }
 
 interface IAddedModulesCleanupProps {
@@ -178,7 +178,6 @@ interface IAddedModulesCleanupProps {
  * removing (and avoid errors in selectors)
  */
 class AddedModulesCleanup extends React.Component<IAddedModulesCleanupProps> {
-
     public render() {
         return null;
     }

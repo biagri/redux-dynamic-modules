@@ -1,2 +1,2 @@
-export * from "redux-dynamic-modules-core";
-export * from "redux-dynamic-modules-react";
+export * from "@biagri/redux-dynamic-modules-core";
+export * from "@biagri/redux-dynamic-modules-react";

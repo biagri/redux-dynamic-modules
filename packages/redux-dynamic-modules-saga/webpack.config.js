@@ -13,12 +13,12 @@ module.exports = (env, argv) => {
         },
 
         output: {
-            library: "redux-dynamic-modules-saga",
+            library: "@biagri/redux-dynamic-modules-saga",
             libraryTarget: "umd",
             filename:
                 mode_env === "production"
-                    ? "redux-dynamic-modules-saga.min.js"
-                    : "redux-dynamic-modules-saga.js",
+                    ? "@biagri/redux-dynamic-modules-saga.min.js"
+                    : "@biagri/redux-dynamic-modules-saga.js",
             path: __dirname + "/dist/",
         },
 
@@ -27,7 +27,8 @@ module.exports = (env, argv) => {
             redux: "redux",
             "react-redux": "react-redux",
             "redux-saga": "redux-saga",
-            "redux-dynamic-modules-core": "redux-dynamic-modules-core",
+            "@biagri/redux-dynamic-modules-core":
+                "@biagri/redux-dynamic-modules-core",
         },
         plugins: [
             new BundleAnalyzerPlugin({

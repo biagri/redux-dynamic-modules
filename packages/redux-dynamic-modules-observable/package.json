@@ -27,10 +27,10 @@
     "author": "Navneet Gupta (Microsoft), Alex Bettadapur (Facebook)",
     "license": "MIT",
     "devDependencies": {
+        "@biagri/redux-dynamic-modules-core": "^5.2.4-ssr.0",
         "@types/jest": "^23.3.1",
         "@types/redux": "3.6.0",
         "jest": "^23.5.0",
-        "redux-dynamic-modules-core": "^5.2.3",
         "redux-observable": "^1.2.0",
         "rimraf": "^2.6.2",
         "rxjs": "^6.5.3",
@@ -61,7 +61,7 @@
         ]
     },
     "peerDependencies": {
-        "redux-dynamic-modules-core": ">=5.0.0",
+        "@biagri/redux-dynamic-modules-core": ">=5.0.0",
         "redux-observable": ">=1.x",
         "rxjs": ">=6.x"
     },

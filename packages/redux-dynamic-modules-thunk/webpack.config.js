@@ -13,12 +13,12 @@ module.exports = (env, argv) => {
         },
 
         output: {
-            library: "redux-dynamic-modules-thunk",
+            library: "@biagri/redux-dynamic-modules-thunk",
             libraryTarget: "umd",
             filename:
                 mode_env === "production"
-                    ? "redux-dynamic-modules-thunk.min.js"
-                    : "redux-dynamic-modules-thunk.js",
+                    ? "@biagri/redux-dynamic-modules-thunk.min.js"
+                    : "@biagri/redux-dynamic-modules-thunk.js",
             path: __dirname + "/dist/",
         },
 
@@ -27,7 +27,8 @@ module.exports = (env, argv) => {
             redux: "redux",
             "react-redux": "react-redux",
             "redux-thunk": "redux-thunk",
-            "redux-dynamic-modules-core": "redux-dynamic-modules-core",
+            "@biagri/redux-dynamic-modules-core":
+                "@biagri/redux-dynamic-modules-core",
         },
         plugins: [
             new BundleAnalyzerPlugin({

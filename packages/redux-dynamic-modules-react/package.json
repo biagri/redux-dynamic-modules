@@ -53,7 +53,7 @@
     "dependencies": {
         "redux-devtools-extension": "^2.13.7",
         "redux-dynamic-middlewares": "^1.0.0",
-        "redux-dynamic-modules-core": "^5.2.3"
+        "@biagri/redux-dynamic-modules-core": "^5.2.4-ssr.0"
     },
     "gitHead": "4442605f1803a496de144aca71e4744255339593"
 }

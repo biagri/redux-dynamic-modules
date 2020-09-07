@@ -12,12 +12,12 @@ module.exports = (env, argv) => {
         },
 
         output: {
-            library: "redux-dynamic-modules-core",
+            library: "@biagri/redux-dynamic-modules-core",
             libraryTarget: "umd",
             filename:
                 mode_env === "production"
-                    ? "redux-dynamic-modules-core.min.js"
-                    : "redux-dynamic-modules-core.js",
+                    ? "@biagri/redux-dynamic-modules-core.min.js"
+                    : "@biagri/redux-dynamic-modules-core.js",
             path: __dirname + "/dist/",
         },
 
