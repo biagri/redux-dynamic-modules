@@ -1,6 +1,6 @@
 {
     "name": "@biagri/redux-dynamic-modules-observable",
-    "version": "5.2.3",
+    "version": "5.2.4-ssr.0",
     "description": "Observable Extension for redux-dynamic-modules",
     "repository": {
         "type": "github",
