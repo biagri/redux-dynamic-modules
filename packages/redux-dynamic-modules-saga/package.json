@@ -1,10 +1,13 @@
 {
-    "name": "redux-dynamic-modules-saga",
+    "name": "@biagri/redux-dynamic-modules-saga",
     "version": "5.2.3",
     "description": "Saga Extension for redux-dynamic-modules",
     "repository": {
         "type": "github",
-        "url": "https://github.com/Microsoft/redux-dynamic-modules"
+        "url": "https://github.com/biagri/redux-dynamic-modules"
+    },
+    "publishConfig": {
+        "access": "public"
     },
     "main": "./lib/index.js",
     "types": "./lib/index.d.ts",
@@ -62,5 +65,5 @@
         "redux-dynamic-modules-core": ">=0.0.7",
         "redux-saga": ">=0.0.16"
     },
-    "gitHead": "8ea732047c2a08b1421ed68e76643e0bb6aa9362"
+    "gitHead": "4442605f1803a496de144aca71e4744255339593"
 }

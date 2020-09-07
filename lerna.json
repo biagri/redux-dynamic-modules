@@ -1,7 +1,5 @@
 {
-    "packages": [
-        "packages/*"
-    ],
+    "packages": ["packages/*"],
     "hoist": true,
     "version": "5.2.3",
     "command": {
